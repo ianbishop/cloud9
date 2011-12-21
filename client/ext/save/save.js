@@ -424,6 +424,7 @@ module.exports = ext.register("ext/save/save", {
         var file = page.$model.data;
         var path = file.getAttribute("path");
         var newPath = lblPath.getProperty('caption') + txtSaveAs.getValue();
+        var node = page.$model.getXml();
 
         // check if we're already saving!
         var saving = parseInt(file.getAttribute("saving"), 10);
